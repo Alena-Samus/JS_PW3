@@ -9,20 +9,24 @@
 </head>
 
 <body>
-  Введите слово.<br>
+ 
   <script>
+    //Ввод данных и проверка их корректности
     let numberMonth = window.prompt('Введите номер месяца:\nВводить числа от 1 до 12')
     let mon = +numberMonth.trim().replace(/\s+/g, '')
+    console.log(mon);
+
     while (Number.isInteger(mon) == false || mon > 12) {
-    alert('Номер месяца введен неверно!\nПопробуйте еще раз')
-    numberMonth = window.prompt('Введите номер месяца:\nВводить числа от 1 до 12')
-    mon = +numberMonth.trim().replace(/\s+/g, '')  
-  }
-  console.log(numberMonth + 1);
-  let season = '';
-  
+      alert('Номер месяца введен неверно!\nПопробуйте еще раз')
+      numberMonth = window.prompt('Введите номер месяца:\nВводить числа от 1 до 12')
+      mon = +numberMonth.trim().replace(/\s+/g, '')  
+      console.log(mon);
+    }
+ 
+    //Вывод сезона на экран в зависимости от номера введенного месяца
+    let season = '';  
     
-    switch (numberMonth.trim().replace(/\s+/g, '')) {
+    switch (String(mon)) {
       case '12': 
       case '1': 
       case '2':
