@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Операторы ветвлений и условий в JavaScript</title>
+</head>
+<body>
+  <script>
+    //Ввод данных
+    let year = prompt('В каком году у Вас в группе начал вести занятия Виталий Валентинович?\nВводите только цифры!!!', '');
+    
+    //Проверка корректности ввода данных
+    if (!isFinite(year) || year <= 0 ){
+      alert('Вы ввели некорректные данные! Такого года нет!');
+    }
+    
+    //Проверка условия и вывод результата
+    else if (year != 2021)
+    {
+      alert('А вот...');
+      alert('...и неправильно!');
+    }
+      else
+      alert('Верно!');
+  </script>
+</body>
+</html>
