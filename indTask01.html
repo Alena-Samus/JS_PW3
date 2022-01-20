@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Индивидуальное задание №1</title>
+</head>
+<body>
+  <script>
+    let a = prompt('Введите переменную а:\nВводите только конечное число!!!', '');
+      if (!isFinite(a) || a == '' || a == ' ') {
+        alert('Вы ввели некорректные данные!\nВозможно число содержит не только цифры либо оно не является конечным, либо вышло за пределы типа данных Number');
+      }
+    
+    let b = prompt('Введите переменную b:\nВводите только конечное число!!!', '');
+      if (!isFinite(b) || b == '' || b == ' ') {
+        alert('Вы ввели некорректные данные!\nВозможно число содержит не только цифры либо оно не является конечным, либо вышло за пределы типа данных Number');
+      }
+
+    let res = +a * +b;
+    console.log(res);
+
+    if (res < 0)
+      alert('Нельзя извлечь квадратный корень из отрицательного числа!');
+    else if (!isFinite(Math.sqrt(res)))
+      alert('Извлечь квадратный корень невозможно! Одна из переменных была введена неверно либо результат умножения переменных вышел за пределы типа данных Number');
+        else if(Math.sqrt(res) < 4)
+          alert('Мало');
+          else if(Math.sqrt(res) > 4)
+            alert ('Много');
+            else 
+            alert('Равно');
+  </script>
+</body>
+</html>
